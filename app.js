@@ -71,9 +71,10 @@ const userPrompt = () => {
                     choices: ["Morning", "Afternoon"]
                 },
                 {
-                    type: "input",
+                    type: "list",
                     name: "eventStart",
-                    message: "What time will the event begin?"
+                    message: "What time will the event start?",
+                    choices: ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
                 },
                 {
                     type: "list",
@@ -82,9 +83,10 @@ const userPrompt = () => {
                     choices: ["Morning", "Afternoon"]
                 },
                 {
-                    type: "input",
+                    type: "list",
                     name: "eventEnd",
-                    message: "What time will the event end?"
+                    message: "What time will the event end?",
+                    choices: ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
                 },
                 //determine what time works best if morning is chosen
 
