@@ -1,18 +1,24 @@
 //package allowing user interaction in the terminal
 const inquirer = require("inquirer");
 
-
+let upComingEvents = [];
 
 
 //function to prompt user t
 const userPrompt = () => {
-    const eventData = {
-        id: null,
-        name: null,
-        startTime: null,
-        endTime: null,
-        description: null
-    }
+
+    let upComingEvents = [];
+
+    // let eventData = {
+    //     id: null,
+    //     name: null,
+    //     startTime: null,
+    //     endTime: null,
+    //     description: null
+    // }
+
+
+
 
     // Created a series of questions
     inquirer.prompt([
@@ -76,8 +82,8 @@ const userPrompt = () => {
 
             ]).then(answers => {
 
-                let upComingEvents = {
-                    id: answers.id,
+                let newEvent = {
+                    id: upComingEvents[upComingEvents.length -1].id +1,
                     startTime: answers.startTime,
                     eventTimeStart: answers.eventTimeStart,
                    endTime: answers.endTime,
@@ -86,7 +92,7 @@ const userPrompt = () => {
                    weekday: answers.day }
 
                 upComingEvents.push(eventData)
-                id = my_array[my_array.length -1].id + 1
+                1
 
                 console.log(
                 "You've scheduled an event on " + 
