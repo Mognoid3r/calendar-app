@@ -137,7 +137,7 @@ const userPrompt = () => {
             ]).then(answer => {
 
                 let removeEvent = upComingEvents.findIndex(i => i.value === answer.day)
-
+                    //findIndex loops over the upComingEvents array until it finds the value = to answer.day, being the users input.  This is o(n).
                 upComingEvents.splice(removeEvent, 1)
                 console.log(upComingEvents)
                 userPrompt();
@@ -157,6 +157,8 @@ const userPrompt = () => {
 
 
                 let specificEvent = upComingEvents.findIndex(i => i.value === answer.day)
+                 //similar to the last example, findIndex loops over the upComingEvents array until it finds the value = to answer.day, being the users input.  This is o(n).
+
                 console.log(upComingEvents[specificEvent])
                 userPrompt();
 
